@@ -1,0 +1,57 @@
+#1)
+
+SELECT  [Fact Table].[Country].[Country] on columns ,
+{[Timedimension].[Year].children} on rows  from  [Trending Video]
+where  [Measures].[Likes]
+
+-------------------------------------
+#2)
+
+SELECT [Fact Table].[Country].members on columns ,
+[Fact Table].[Category Id].members on rows from [Trending Video]
+where [Measures].[Dislikes]
+
+----------------------------------------------------
+
+#3)
+SELECT
+{ [Measures].[Comment Count],[Measures].[Likes],[Measures].[Views],[Measures].[Dislikes]}ON
+COLUMNS,
+ CrossJoin({[Fact Table].[Country].&[france],[Fact Table].[Country].&[England]}
+ ,{[Timedimension].[Year].&[2015],[Timedimension].[Year].&[2016]}) ON ROWS
+FROM [Trending Video] 
+
+--------------------------------------------
+#4)
+
+SELECT
+{ [Measures].[Comment Count],[Measures].[Likes],[Measures].[Views],[Measures].[Dislikes]}ON
+COLUMNS,
+ CrossJoin({[Fact Table].[Country].&[france],[Fact Table].[Country].&[England]}
+ ,[Timedimension].[Year].&[2017],[Fact Table].[Category Id].&[1]) ON ROWS
+FROM [Trending Video] 
+
+
+------------------------------------------------
+#5)
+
+
+
+SELECT
+Union ([Fact Table].[Country].&[America],
+[Fact Table].[Country].&[canda],
+[Fact Table].[Country].&[England],
+[Fact Table].[Country].&[france]
+) ON COLUMNS,
+ {[Measures].[Likes],[Measures].[Dislikes],[Measures].[Comment Count]} ON ROWS
+FROM [Trending Video]
+
+
+---------------------------------------------------------------
+6#)
+
+
+SELECT 
+Intersect ({[Timedimension].[Year].&[2016],[Timedimension].[Year].&[2017]},{[Timedimension].[Year].&[2016]}) ON COLUMNS,
+[Measures].[Likes]ON ROWS
+FROM [Trending Video]
