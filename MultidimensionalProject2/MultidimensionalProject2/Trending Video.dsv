@@ -1,0 +1,110 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="305fba84-baaa-4b67-8755-b9911cd172eb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Trending Video</ID>
+  <Name>Trending Video</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Trending Video</DataSourceID>
+  <Schema>
+    <xs:schema id="Trending_x0020_Video" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Trending_x0020_Video" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a4c3f182-7eb1-45ff-b90a-968c4f0140fe">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_FactTable" msprop:design-time-name="0ed7e4e9-f3df-47da-b626-1c8d46d1108c" msprop:DbTableName="FactTable" msprop:FriendlyName="FactTable" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="video_id" msprop:design-time-name="7947789a-653b-4591-9bb9-202654a96412" msprop:DbColumnName="video_id" msprop:FriendlyName="video_id" type="xs:int" />
+                  <xs:element name="trending_date" msprop:design-time-name="8cc168c7-04a2-4c92-8541-8ffd75d3730d" msprop:DbColumnName="trending_date" msprop:FriendlyName="trending_date" type="xs:string" />
+                  <xs:element name="category_id" msprop:design-time-name="b75a65dc-dca2-4063-8aef-18321267a136" msprop:DbColumnName="category_id" msprop:FriendlyName="category_id" type="xs:int" />
+                  <xs:element name="publish_time" msprop:design-time-name="10ebd187-d1e4-4c3c-9d50-eb82585f1394" msprop:DbColumnName="publish_time" msprop:FriendlyName="publish_time" type="xs:dateTime" />
+                  <xs:element name="views" msprop:design-time-name="dc1d4a06-0e19-4328-abac-cbc7229dfbcd" msprop:DbColumnName="views" msprop:FriendlyName="views" type="xs:int" />
+                  <xs:element name="likes" msprop:design-time-name="6a3d68e1-ffc2-435a-8668-7eae02bc692c" msprop:DbColumnName="likes" msprop:FriendlyName="likes" type="xs:int" />
+                  <xs:element name="dislikes" msprop:design-time-name="2f86d88d-ef0a-4fdf-9634-87bee98b1376" msprop:DbColumnName="dislikes" msprop:FriendlyName="dislikes" type="xs:int" />
+                  <xs:element name="comment_count" msprop:design-time-name="522c5dcf-5dd4-4824-993d-204bf573e11a" msprop:DbColumnName="comment_count" msprop:FriendlyName="comment_count" type="xs:int" />
+                  <xs:element name="country" msprop:design-time-name="f910fd9c-fe3d-48e3-a27c-e7f204174953" msprop:DbColumnName="country" msprop:FriendlyName="country" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_timedimension" msprop:design-time-name="f731807c-a5e2-4377-9258-da5988eb5b05" msprop:DbTableName="timedimension" msprop:FriendlyName="timedimension" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="publish_time" msprop:design-time-name="0b412028-858a-4674-9cc5-4e0bb8c14150" msprop:DbColumnName="publish_time" msprop:FriendlyName="publish_time" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:design-time-name="2acf0a78-8733-4abe-825c-04a0af725b00" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="4f3f4b8d-2fdc-4577-a600-0821efd80786" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:design-time-name="f9bf0f83-81e9-4d80-bedf-f092eec4da08" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_videoIDdimension" msprop:design-time-name="1ea043c8-e3a7-454b-998e-e3ae752210bc" msprop:DbTableName="videoIDdimension" msprop:FriendlyName="videoIDdimension" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="video_id" msprop:design-time-name="62668d4b-f3a0-4a26-9434-2d28666d3304" msprop:DbColumnName="video_id" msprop:FriendlyName="video_id" type="xs:int" />
+                  <xs:element name="title" msprop:design-time-name="06c5378d-28fc-42d3-bd80-861845a16676" msprop:DbColumnName="title" msprop:FriendlyName="title" type="xs:string" />
+                  <xs:element name="channel_title" msprop:design-time-name="becc1106-faa1-479a-bb12-384364b80af6" msprop:DbColumnName="channel_title" msprop:FriendlyName="channel_title" type="xs:string" />
+                  <xs:element name="thumbnail_link" msprop:design-time-name="964b52e2-9e18-4ef5-a446-86b6fe296d25" msprop:DbColumnName="thumbnail_link" msprop:FriendlyName="thumbnail_link" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactTable" />
+          <xs:field xpath="video_id" />
+          <xs:field xpath="publish_time" />
+        </xs:unique>
+        <xs:unique name="dbo_timedimension_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_timedimension" />
+          <xs:field xpath="publish_time" />
+        </xs:unique>
+        <xs:unique name="dbo_videoIDdimension_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_videoIDdimension" />
+          <xs:field xpath="video_id" />
+        </xs:unique>
+        <xs:keyref name="FK_FactTable_videoIDdimension" refer="dbo_videoIDdimension_Constraint1">
+          <xs:selector xpath=".//dbo_FactTable" />
+          <xs:field xpath="video_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactTable_timedimension" refer="dbo_timedimension_Constraint1">
+          <xs:selector xpath=".//dbo_FactTable" />
+          <xs:field xpath="publish_time" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Trending_x0020_Video xmlns="" />
+  </Schema>
+</DataSourceView>
